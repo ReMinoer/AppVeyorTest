@@ -1,6 +1,12 @@
 version: '${appveyor_repo_commit}'
 image: Visual Studio 2017
 
+build:
+  verbosity: minimal
+  
+before_build:
+  - nuget restore
+
 dotnet_csproj:
   patch: true
   file: '**\*.csproj'
