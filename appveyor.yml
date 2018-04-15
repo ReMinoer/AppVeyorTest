@@ -1,9 +1,6 @@
 version: '{appveyor_repo_commit}-{build}'
 image: Visual Studio 2017
 
-before_build:
-  - nuget restore
-
 dotnet_csproj:
   patch: true
   file: '**\*.csproj'
@@ -12,6 +9,13 @@ dotnet_csproj:
   assembly_version: '${appveyor_repo_tag_name}'
   file_version: '${appveyor_repo_tag_name}'
   informational_version: '${appveyor_repo_tag_name}'
+
+before_build:
+  - nuget restore
+
+build:
+  publish_nuget: true
+  publish_nuget_symbols: true
 
 artifacts:
   - path: '**\*.nupkg'
