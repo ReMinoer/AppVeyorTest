@@ -12,13 +12,17 @@ dotnet_csproj:
 
 before_build:
   - nuget restore
+  
+configuration:
+  - Debug
+  - Release
 
 build:
   publish_nuget: true
   publish_nuget_symbols: true
 
 artifacts:
-  - path: '**\*.nupkg'
+  - path: 'bin\Release\**\*.nupkg'
 
 deploy:
   - provider: NuGet
