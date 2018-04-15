@@ -1,4 +1,4 @@
-version: '${appveyor_repo_commit}'
+version: '{appveyor_repo_commit}-{build}'
 image: Visual Studio 2017
 
 build:
