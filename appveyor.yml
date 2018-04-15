@@ -1,9 +1,6 @@
 version: '{appveyor_repo_commit}-{build}'
 image: Visual Studio 2017
 
-build:
-  verbosity: minimal
-  
 before_build:
   - nuget restore
 
