@@ -1,4 +1,5 @@
 version: '${appveyor_repo_commit}'
+image: Visual Studio 2017
 
 dotnet_csproj:
   patch: true
