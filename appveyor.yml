@@ -1,4 +1,4 @@
-version: '{appveyor_repo_commit}-{build}'
+version: 'Build {build}'
 image: Visual Studio 2017
 
 dotnet_csproj:
