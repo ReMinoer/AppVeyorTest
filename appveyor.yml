@@ -18,7 +18,7 @@ configuration:
   - Release
 
 artifacts:
-  - path: 'bin\Release\**\*.nupkg'
+  - path: '*\bin\Release\**\*.nupkg'
 
 deploy:
   - provider: NuGet
@@ -27,6 +27,7 @@ deploy:
       secure: LCNNDlIjg3mq6MP2J5kE1SGK5+QRMkCBtTb3H1cy27FTEm/3KthFldRvZrAHzkGN
     on:
       branch: master
+      configuration: Release
       appveyor_repo_tag: true
   - provider: GitHub
     artifact: /.*Diese[^\/\\]*\.dll/
@@ -37,4 +38,5 @@ deploy:
       secure: NFu7VATIRtpS96dnh27gq3AgyBTDfD/RvLNcdgG5N0HKXYUjHZoEIMoMaFjMD6Za
     on:
       branch: master
+      configuration: Release
       appveyor_repo_tag: true
