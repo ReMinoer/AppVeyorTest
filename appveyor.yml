@@ -13,9 +13,7 @@ dotnet_csproj:
 before_build:
   - nuget restore
   
-configuration:
-  - Debug
-  - Release
+configuration: Release
 
 artifacts:
   - path: '*\bin\Release\**\*.nupkg'
@@ -30,7 +28,7 @@ deploy:
       configuration: Release
       appveyor_repo_tag: true
   - provider: GitHub
-    artifact: /.*Diese[^\/\\]*\.dll/
+    artifact: /.*\.nupkg/
     release: ${appveyor_repo_tag_name}
     description: 'Version ${appveyor_repo_tag_name}'
     force_update: true
