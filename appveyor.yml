@@ -1,4 +1,4 @@
-version: 'Build {build}'
+version: 'Build_{build}'
 image: Visual Studio 2017
 
 dotnet_csproj:
