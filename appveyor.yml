@@ -15,8 +15,11 @@ before_build:
   
 configuration: Release
 
+build:
+  verbosity: minimal
+
 artifacts:
-  - path: '**\bin\Release\**\*.nupkg'
+  - path: '**\bin\Release\**.nupkg'
 
 deploy:
   - provider: NuGet
