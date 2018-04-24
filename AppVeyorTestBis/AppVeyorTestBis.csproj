@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <PackageId>ReMinoer.AppVeyorTestBis</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>ReMinoer</Company>
+    <Authors>ReMinoer</Authors>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppVeyorTest\AppVeyorTest.csproj" />
+  </ItemGroup>
+
+</Project>
